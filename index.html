@@ -19,15 +19,68 @@
   #foot {
     background: #f3f0eb;
     color: #a7580a;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: auto;
   }
 
   a:hover {
     color: #dc9951;
     text-decoration: underline;
   }
+  .header {
+        text-align: center;
+        color: white;
+        padding: 30px 0;
+    }
+
+  .header img {
+        height: 65px;
+        width: 65px;
+        object-fit: contain;
+        margin-right: 15px;
+    }
+
+  .form-container {
+        background: rgba(255, 255, 255, 0.80);
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+  h5 {
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+  .form-label {
+        margin-bottom: 5px;
+    }
+
+  .form-section {
+        margin-bottom: 20px;
+    }
+
+  .submit-btn {
+        background-color: #da800c;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 25px;
+    }
+
+  .submit-btn:hover {
+        background-color: #985e08;
+    }
+
+  input[type="text"], input[type="select"], input[type="email"], input[type="tel"], input[type="date"],.form-select {
+        width: 94%;
+        background-color: #e3e9f3;
+        border: 1px solid #6e8db4;
+        border-radius: 5px;
+    }
 </style>
   </head>
 
@@ -54,44 +107,136 @@
   </div>
 </nav>
 
-<div class="container" id="enroll">
-   <form>
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <input type="date" class="form-control" placeholder="MM/DD/YYYY">
-    </div>
-    <div class="col">
-      <select class="form-control">
-        <option value="">Select..</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-    </div>
-    <div class="col">
-      <select class="form-control">
-        <option value="">Select..</option>
-        <option value="casa">Casa</option>
-        <option value="primary">Primary</option>
-        <option value="junior">Junior High</option>
-        <option value="senior">Senior High</option>
-      </select>
-    </div>
-  </div>
-</form>
+<header>
+  <div class="header">
+    <h1 class="text-center text-dark"> <img src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.15752-9/911849338_1191769976526917_1332763677667157267_n.png?stp=dst-png_s960x960&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_ohc=tUVYze-iRv0Q7kNvwGIsKsr&_nc_oc=AdqF8LNYRL-46dBeNIGjn2Tt_ynGd93u9kTEH9JRjEDiZrPg21z34keNeUg-hCCHXFQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl25-5.fna&_nc_ss=7a22e&oh=03_Q7cD6wFA-d0mKaEfSiVxtXpzt56jqIk7oIs4ecDgTsh0-Msaag&oe=6B24E7A0" alt="OBMC Logo">OBMC Student Enrollment Form </h1>
+    <p class="text-muted">Fill out the form below to enroll for the upcoming school year.</p>
 </div>
+</header>
+
+<div class="container" id="enroll">
+    <div class="form-container" style="box-shadow: 5px 5px 10px rgba(16, 0, 0, 0.5);background: #c6d3e96d;">
+        <form>
+
+            <div class="form-section">
+                <h5>Information</h5>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Campus</label>
+                        <select class="form-select">
+                            <option value="">Select...</option>
+                            <option value="fv">Fairview</option>
+                            <option value="gh">Greenhills</option>
+                            <option value="sa">Sta. Ana</option>
+                            <option value="ag">Angeles</option>
+                            <option value="lp">Las Piñas</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Enrollment Type</label>
+                        <select class="form-select">
+                            <option value="">Select...</option>
+                            <option value="new">New Student</option>
+                            <option value="returning">Returning Student</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">School Year</label>
+                        <input type="text" class="form-control" placeholder="2026-2027">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h5>Student Information</h5>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="John">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Birth Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select">
+                            <option value="">Select...</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Grade Level</label>
+                        <select class="form-select">
+                            <option value="">Select...</option>
+                            <option value="casa">Casa</option>
+                            <option value="primary">Primary</option>
+                            <option value="junior">Junior High</option>
+                            <option value="senior">Senior High</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h5>Contact Details</h5>
+
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="johndoe@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" placeholder="0912-345-6789">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h5>Other Information</h5>
+
+                <label class="form-label">Mode of Learning</label>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="learning" value="online">
+                    <label class="form-check-label">Online</label>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="radio" class="form-check-input" name="learning" value="face-to-face">
+                    <label class="form-check-label">Face-to-face</label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                <div class="form-check mb-4">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label"> I agree to the terms and conditions.</label>
+                </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+              <button type="button" class="submit-btn" onclick="window.location.href='success.html'">Submit Enrollment</button>
+            </div>
+        </form>
     </div>
+</div>
 
 <footer id="foot">
     <p>&copy;2026 ICT Q2 Skills test. All rights reserved. | Created by Khiane Herrera 9E</p>
 </footer>
+
 </body>
 </html>
